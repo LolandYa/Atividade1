@@ -219,6 +219,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a11f2dd06cec4c4f96c7b1a52150273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftAction:
+    m_Name: Left
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 7263e28f-ed82-4756-948d-64b1227d111b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1402640560
 GameObject:
   m_ObjectHideFlags: 0
