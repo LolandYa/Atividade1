@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
 
   // Variables related to the health system
+  public int health { get { return currentHealth; }}
   public int maxHealth = 5;
   int currentHealth = 1;
 
