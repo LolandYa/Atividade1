@@ -32802,6 +32802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageZone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4935644317688318416, guid: 7be4256e360ff924ca868c4febace2a6,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32914,12 +32919,12 @@ PrefabInstance:
     - target: {fileID: 3036943531037483876, guid: d7c8c81ce58be0b4b935e3f9ff745317,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.36
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 3036943531037483876, guid: d7c8c81ce58be0b4b935e3f9ff745317,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.55
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 3036943531037483876, guid: d7c8c81ce58be0b4b935e3f9ff745317,
         type: 3}
