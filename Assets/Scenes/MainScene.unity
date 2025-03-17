@@ -32543,6 +32543,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7535854184030396323, guid: 112c7ebe48d98b649b22a7616d0efa1b,
+        type: 3}
+      propertyPath: vertical
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9207436475140666020, guid: 112c7ebe48d98b649b22a7616d0efa1b,
         type: 3}
       propertyPath: m_LocalPosition.x
