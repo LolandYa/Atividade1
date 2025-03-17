@@ -471,6 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263090511}
   - component: {fileID: 1263090510}
+  - component: {fileID: 1263090512}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -533,6 +534,22 @@ Transform:
   - {fileID: 1973814618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263090512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263090509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 2059586337}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
+  m_Padding: 0
 --- !u!1 &1402640560
 GameObject:
   m_ObjectHideFlags: 0
@@ -32883,6 +32900,113 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2059586336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059586338}
+  - component: {fileID: 2059586337}
+  m_Layer: 0
+  m_Name: CameraConfinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &2059586337
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059586336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -14, y: 43}
+      - {x: -13, y: 33}
+      - {x: -13, y: 28}
+      - {x: -27.816929, y: 28.047031}
+      - {x: -27.563797, y: 18.358696}
+      - {x: -33.90197, y: 18.135975}
+      - {x: -33.676765, y: 9.274746}
+      - {x: -23.883507, y: 8.917721}
+      - {x: -23.358147, y: 0.38551998}
+      - {x: -17.857048, y: 0.06747246}
+      - {x: -17.75751, y: -4.8777227}
+      - {x: -12.754837, y: -4.976492}
+      - {x: -11.742632, y: -16.287209}
+      - {x: 11.159463, y: -16.894117}
+      - {x: 11.194534, y: -3.2833357}
+      - {x: 20.073463, y: -2.8277912}
+      - {x: 20.205074, y: 7.116289}
+      - {x: 38.06945, y: 7.2731705}
+      - {x: 46.217407, y: 7.3447247}
+      - {x: 46.06427, y: 16.009285}
+      - {x: 43.992493, y: 16.300661}
+      - {x: 43.46427, y: 18.043524}
+      - {x: 31.313143, y: 18.32468}
+      - {x: 31.375324, y: 20.365637}
+      - {x: 20.514452, y: 20.382801}
+      - {x: 20.627657, y: 24.163757}
+      - {x: 16.747139, y: 24.166157}
+      - {x: 16.20174, y: 28.301826}
+      - {x: 12.672828, y: 28.287457}
+      - {x: 11.919733, y: 44.0645}
+  m_UseDelaunayMesh: 0
+--- !u!4 &2059586338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059586336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.67457545, y: 10.310474, z: -0.092301354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &662872532017980424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34523,3 +34647,4 @@ SceneRoots:
   - {fileID: 330855501}
   - {fileID: 5519866214568658038}
   - {fileID: 1263090511}
+  - {fileID: 2059586338}
