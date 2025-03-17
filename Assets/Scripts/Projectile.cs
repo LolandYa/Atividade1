@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D rigidbody2d;
+   Rigidbody2D rigidbody2d;
 
 
    // Awake is called when the Projectile GameObject is instantiated
@@ -15,7 +15,10 @@ public class Projectile : MonoBehaviour
 
    void Update()
    {
-     
+       if(transform.position.magnitude > 100.0f)
+       {
+           Destroy(gameObject);
+       }
    }
 
 
@@ -24,10 +27,17 @@ public class Projectile : MonoBehaviour
        rigidbody2d.AddForce(direction * force);
   }
 
+
    void OnTriggerEnter2D(Collider2D other)
   {
-       Debug.Log("Projectile collision with " + other.gameObject);
-        Destroy(gameObject);
+       EnemyController enemy = other.GetComponent<EnemyController>();
+       if (enemy != null)
+           {
+               enemy.Fix();
+           }
+
+
+       Destroy(gameObject);
   }
 
 }

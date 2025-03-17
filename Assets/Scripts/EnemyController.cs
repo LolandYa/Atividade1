@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-   // Public variables
+  // Public variables
    public float speed;
    public bool vertical;
    public float changeTime = 3.0f;
@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
    Animator animator;
    float timer;
    int direction = 1;
+   bool broken = true;
 
 
    // Start is called before the first frame update
@@ -24,23 +25,30 @@ public class EnemyController : MonoBehaviour
        timer = changeTime;
       
    }
-   
-   void Update()
-   {
-   timer -= Time.deltaTime;
 
 
-      if (timer < 0)
-      {
-           direction = -direction;
-           timer = changeTime;
-      }
-   }
+ // Update is called every frame
+  void Update()
+  {
+        timer -= Time.deltaTime;
+
+
+        if (timer < 0)
+        {
+            direction = -direction;
+            timer = changeTime;
+        }
+  }
 
 
   // FixedUpdate has the same call rate as the physics system
   void FixedUpdate()
   {
+      if(!broken)
+      {
+           return;
+      }
+     
        Vector2 position = rigidbody2d.position;
      
        if (vertical)
@@ -72,6 +80,20 @@ public class EnemyController : MonoBehaviour
        }
    }
 
+
+ void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+
+
+   public void Fix()
+   {
+       broken = false;
+       GetComponent<Rigidbody2D>().simulated = false;
+       animator.SetTrigger("Fixed");
+   }
 
 
 }
