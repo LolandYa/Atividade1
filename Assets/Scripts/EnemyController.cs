@@ -22,11 +22,14 @@ public class EnemyController : MonoBehaviour
        timer = changeTime;
    }
 
+
    // Update is called every frame
    void Update()
    {
+     
 
-       timer  -= Time.deltaTime;
+
+       timer-= Time.deltaTime;
 
 
       if (timer < 0)
@@ -35,6 +38,9 @@ public class EnemyController : MonoBehaviour
         timer = changeTime;
       }
    }
+
+
+
 
   // FixedUpdate has the same call rate as the physics system
   void FixedUpdate()
@@ -53,5 +59,18 @@ public class EnemyController : MonoBehaviour
 
        rigidbody2d.MovePosition(position);
   }
-}
 
+
+   void OnTriggerEnter2D(Collider2D other)
+   {
+       PlayerController player = other.gameObject.GetComponent<PlayerController>();
+
+
+       if (player != null)
+       {
+           player.ChangeHealth(-1);
+       }
+   }
+
+
+}
